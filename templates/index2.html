@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chemistry Exp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="../static/script.js" type="text/javascript"></script>
+</head>
+<body>
+    <br><br>
+    <!--
+    <img src="static/emptyTestTube.png" class="iii" height="200px"> 
+    
+
+    <img src="static/halfTestTube.png" class="iii" height="200px">     
+    <img src="static/beaker_pour.png" class="iii" height="200px">     
+    <img src="static/conicalflask_pour.png" class="iii" height="200px">     
+    <div class="parent">
+        <img class="image1 iii" src="static/fullTestTube.png" height="200px">
+        <img class="image2" src="static/pptTestTube.png" height="20px">          
+    </div> 
+       
+    <img src="static/fullTestTube.png" class="iii" height="200px" >    -->
+
+    
+
+    <input type="hidden" id="myData" value="{{objs}}">
+    <input type="hidden" id="para" value="{{para}}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@592&family=Merienda&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@592&family=Merienda&display=swap" rel="stylesheet">
+    <!--
+    <nav class="navbar">
+        <img class="logo">
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="templates/exp.html">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </nav>
+-->
+
+    <div id="space">
+        <h3 class="heading">Titration</h3>
+        <p id="statement"></p>
+    </div>
+
+
+   
+    <div id="apparatus">
+        <h4 id="head_appa"> APPARATUS USED </h4> 
+        <ul>
+        <p id="appa"></p>
+        </ul>
+    </div>
+
+
+    <div id="b">
+        <button onclick="prevSentence()" class="butn">Previous</button>
+        <div class="space_butn"></div>
+        <button onclick="nextSentence()" class="butn">Next</button>
+    </div>
+
+
+    <div id="text">
+        <p id="statement"></p>
+    </div>
+
+    <form id="formm">
+        <label class="switch">
+            <input type="checkbox"  id="the_check_box" onclick="checkMe()">
+            <span class="slider round"></span>
+        </label>
+        <!--<p id="msg" style="display:none;">{{objs}}</p>    -->
+        
+    
+    <div id="boxes" style="display:none;" value="{{abc}}">
+        <h2 >Apparatuses Used</h3>
+            
+        <p id="val"> </p>
+    
+        <!--{% for a in abc %}
+            <ul>
+            <li>{{a}}</li>
+            </ul>
+        {% endfor %}-->
+        
+    </div>
+       
+   
+      
+    </form>
+    <!--
+    <img src="C:\Users\Ananya\OneDrive\Pictures\conical.png" height="200" width="150">
+    <img src="C:\Users\Ananya\OneDrive\Pictures\test_tube.png" height="200" width="150">
+    <img src="C:\Users\Ananya\OneDrive\Pictures\beaker.png" height="200" width="150">
+    <img src="C:\Users\Ananya\OneDrive\Pictures\round_bottom_flask.png" height="200" width="200">
+    <img src="C:\Users\Ananya\OneDrive\Pictures\ee.png" height="200" width="200">
+
+    
+    <img src="C:\Users\Ananya\OneDrive\Pictures\funnel.png" height="200" width="300">
+
+    
+    <img src="C:\Users\Ananya\OneDrive\Pictures\clamp_stand.png" height="200" width="300">
+
+    -->
+
+
+    <!--
+    <div class="slider">
+    <div class="img-box">
+        <img src="static/beaker.png" alt="" class="slider-img" height="20" width="20"/>
+    </div>
+    <button class="btn" onclick="next()">blue</button>
+
+    </div>    
+
+
+<div>
+<button class="next" onclick="myfunction(this)">Click</button> 
+</div>
+
+<p id="hello">apparatuses</p>
+<div id="apparatus">
+    
+    {% for a in instruments %}
+        <ul>
+            <li>{{a}}</li>
+        </ul>
+    {% endfor %}
+</div>
+-->
+
+</body>
+
+<script>
+    function checkMe(){
+        var cb = document.getElementById("the_check_box");
+        var text = document.getElementById("boxes");
+        if(cb.checked==true){
+            text.style.display="block";
+        }else{
+            text.style.display="none";
+        }
+    }
+</script>
+</html>
